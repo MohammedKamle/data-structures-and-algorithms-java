@@ -1,4 +1,6 @@
-package queue;
+package queue.linearqueue;
+
+import queue.linearqueue.QueueArray;
 
 public class Main {
 
