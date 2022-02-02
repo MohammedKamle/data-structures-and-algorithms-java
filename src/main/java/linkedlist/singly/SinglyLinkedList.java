@@ -132,7 +132,5 @@ public class SinglyLinkedList {
         size =0; // i have added this
         System.out.println("The SLL is deleted successfully");
     }
-
-
-
 }
+
