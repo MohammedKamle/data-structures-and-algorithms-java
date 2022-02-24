@@ -22,6 +22,6 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7}, 2));
+        System.out.println(binarySearch(new int[]{1,2,3,4,5,6,7}, 7));
     }
 }

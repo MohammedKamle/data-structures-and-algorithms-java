@@ -43,6 +43,7 @@ public class QuickSort {
         }
         System.out.println("??????BEFORE???????");
         System.out.println(Arrays.toString(arr));
+        System.out.println("array length is "+arr.length);
         quickSort(arr, 0, arr.length-1);
         System.out.println("??????AFTER???????");
         System.out.println(Arrays.toString(arr));
