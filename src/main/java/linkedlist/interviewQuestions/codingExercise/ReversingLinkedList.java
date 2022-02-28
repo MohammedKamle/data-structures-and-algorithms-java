@@ -5,11 +5,12 @@ import linkedlist.interviewQuestions.Node;
 
 public class ReversingLinkedList {
 
+   // https://www.youtube.com/watch?v=jY-EUKXYT20&t=308s
     public static LinkedList reverseList(LinkedList list){
-        Node prev =null;
+        Node prev = null;
         Node current = list.head;
-        Node next = list.head;
-        while (next != null){
+        Node next = null;
+        while (current != null){
             next = current.next;
             current.next = prev;
             prev = current;

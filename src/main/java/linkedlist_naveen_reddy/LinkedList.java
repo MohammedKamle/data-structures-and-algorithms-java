@@ -68,10 +68,10 @@ public class LinkedList {
     // traverse SinglyLinkedList
     public void show(){
         Node n = head;
-        while (n.next != null){
+        while (n!= null){
             System.out.println(n.data);
             n = n.next;
         }
-        System.out.println(n.data);
+        //System.out.println(n.data);
     }
 }
