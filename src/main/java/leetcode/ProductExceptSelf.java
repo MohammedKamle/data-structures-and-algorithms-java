@@ -76,7 +76,7 @@ public class ProductExceptSelf {
         return result;
     }
 
-    public int[]  productExceptSelf____(int[] nums) {
+    public int[] productExceptSelf____(int[] nums) {
         int n = nums.length;
         int[] left_products = new int[n];
         int[] right_products = new int[n];
