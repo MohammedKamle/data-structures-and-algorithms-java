@@ -18,5 +18,28 @@ public class TwoSum_2 {
         }
         return result;
     }
+
+    // two pointer approachj
+    public int[] twoSum_(int[] numbers, int target) {
+        int[] result = new int[2];
+        int leftPointer =0;
+        int rightPointer = numbers.length-1;
+        while (leftPointer<rightPointer){
+            if (numbers[leftPointer] + numbers[rightPointer] == target){
+                result[0] = leftPointer+1;
+                result[1] = rightPointer+1;
+                return result;
+            }
+            if (numbers[leftPointer] + numbers[rightPointer] > target){
+                rightPointer --;
+                continue;
+            }
+            leftPointer++;
+        }
+          result[0] = leftPointer+1;
+          result[1] = rightPointer+1;
+          return result;
+        
+      }
     
 }
