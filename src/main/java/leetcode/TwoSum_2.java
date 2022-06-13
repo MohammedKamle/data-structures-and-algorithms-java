@@ -32,7 +32,7 @@ public class TwoSum_2 {
             }
             if (numbers[leftPointer] + numbers[rightPointer] > target){
                 rightPointer --;
-                continue;
+                continue;   
             }
             leftPointer++;
         }
