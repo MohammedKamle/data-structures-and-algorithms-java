@@ -17,6 +17,9 @@ public class TopKFrequent {
             }
 
         }
+        // shortcut
+        //map.put(i, map.getOrDefault(i,0)+1);
+
         // storing k most frequent elements in result array
         int index = 0 ;
         int maxKey = 0;
@@ -29,6 +32,7 @@ public class TopKFrequent {
                 }
             }
             result[index++] =maxKey;
+            // removing the max key from the map for next iteration for getting the next max
             map.remove(maxKey);
         }
         return result;
