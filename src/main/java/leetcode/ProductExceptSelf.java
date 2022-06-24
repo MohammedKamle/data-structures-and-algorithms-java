@@ -11,6 +11,8 @@ import java.util.Arrays;
  *
  * */
 
+//https://www.youtube.com/watch?v=bNvIQI2wAjk&ab_channel=NeetCode
+
 public class ProductExceptSelf {
 
     // O(n) with space O(n)
@@ -53,7 +55,7 @@ public class ProductExceptSelf {
         Arrays.fill(res, 1);
 
         for (int i = 0; i < n; i++) {
-            res[i] *= left;
+            res[i] = left;
             left *= nums[i];
         }
         for (int i = n - 1; i >= 0; i--) {
