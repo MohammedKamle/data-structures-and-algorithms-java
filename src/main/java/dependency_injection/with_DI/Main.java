@@ -2,6 +2,7 @@ package dependency_injection.with_DI;
 
 import dependency_injection.with_DI.consumer.Consumer;
 import dependency_injection.with_DI.injector.EmailServiceInjector;
+import dependency_injection.with_DI.injector.FacebookServiceInjector;
 import dependency_injection.with_DI.injector.MessageServiceInjector;
 import dependency_injection.with_DI.injector.SMSServiceInjector;
 
@@ -23,5 +24,9 @@ public class Main {
         messageServiceInjector = new SMSServiceInjector();
         consumer = messageServiceInjector.getConsumer();
         consumer.processMessage(msg, phone);
+
+        messageServiceInjector = new FacebookServiceInjector();
+        consumer = messageServiceInjector.getConsumer();
+        consumer.processMessage(msg, "raj@facebook.com");
     }
 }
