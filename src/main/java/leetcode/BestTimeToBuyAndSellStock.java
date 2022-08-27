@@ -50,6 +50,16 @@ public class BestTimeToBuyAndSellStock {
         return maxProfit;
     }
 
+    public static int maxProfit___(int[] prices){
+        int min = Integer.MAX_VALUE;
+        int result = Integer.MIN_VALUE;
+        for (int val : prices){
+            min = Math.min(min,val);
+            result = Math.max(result, val-min);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
 
         System.out.println(maxProfit__(new int[]{7,1,5,3,6,4}));
