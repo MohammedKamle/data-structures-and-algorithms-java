@@ -18,7 +18,7 @@ public class DiameterOfBinaryTree {
         }
         int l = getDiameter(root.left);
         int r = getDiameter(root.right);
-        ans = Math.max(ans, (l + r + 1));// updating here to to have max ans, as dia can or cannot go through root
+        ans = Math.max(ans, (l + r + 1));// updating ans to have max ans, as dia can or cannot go through root
         return 1 + Math.max(l, r);
 
     }
