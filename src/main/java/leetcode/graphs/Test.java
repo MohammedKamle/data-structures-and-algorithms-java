@@ -13,6 +13,7 @@ public class Test {
         System.out.println(Arrays.toString(arr));
         test(arr);
         System.out.println(Arrays.toString(arr));
+        System.out.printf("");
     }
 
     private static void test(int[] a){
