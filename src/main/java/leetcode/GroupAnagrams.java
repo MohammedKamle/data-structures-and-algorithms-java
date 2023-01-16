@@ -11,13 +11,12 @@ public class GroupAnagrams {
            Arrays.sort(ch);
            String key = String.valueOf(ch);
            if (!map.containsKey(key)){
-               map.put(String.valueOf(ch), new ArrayList<>());
+               map.put(key, new ArrayList<>());
            }
            map.get(key).add(s);
        }
        return new ArrayList<>(map.values());
     }
-
 
     public static void main(String[] args) {
         System.out.println(new GroupAnagrams().groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
