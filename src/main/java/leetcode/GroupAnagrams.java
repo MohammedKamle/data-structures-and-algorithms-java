@@ -4,6 +4,10 @@ import java.util.*;
 
 public class GroupAnagrams {
 
+    /*
+    * add a sorted string as key in map if it doesn't exist and add value as its original unsorted format
+    * */
+
     public List<List<String>> groupAnagrams(String[] strs) {
        Map<String, List<String>> map = new HashMap<>();
        for (String s : strs){
