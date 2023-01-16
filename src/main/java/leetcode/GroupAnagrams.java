@@ -9,10 +9,11 @@ public class GroupAnagrams {
        for (String s : strs){
            char[] ch = s.toCharArray();
            Arrays.sort(ch);
-           if (!map.containsKey(String.valueOf(ch))){
+           String key = String.valueOf(ch);
+           if (!map.containsKey(key)){
                map.put(String.valueOf(ch), new ArrayList<>());
            }
-           map.get(String.valueOf(ch)).add(s);
+           map.get(key).add(s);
        }
        return new ArrayList<>(map.values());
     }
