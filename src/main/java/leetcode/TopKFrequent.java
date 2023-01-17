@@ -4,9 +4,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class TopKFrequent {
+
     public int[] topKFrequent(int[] nums, int k) {
         int[] result = new int[k];
-        // filling the elements in map
+        /*
+         * filling the elements in map with key as each unique element in nums and value as how many times a key is
+         * repeated
+         * */
         Map<Integer, Integer> map = new HashMap<>();
         for (int i : nums) {
             if (!map.containsKey(i)) {
@@ -30,9 +34,10 @@ public class TopKFrequent {
                     maxKey = i;
                 }
             }
-            result[index++] = maxKey;
+            result[index] = maxKey;
             // removing the max key from the map for next iteration for getting the next max
             map.remove(maxKey);
+            index++;
         }
         return result;
     }
