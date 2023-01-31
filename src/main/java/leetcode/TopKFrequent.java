@@ -47,6 +47,7 @@ public class TopKFrequent {
             elemCountMap.put(num, elemCountMap.getOrDefault(num, 0) + 1);
         }
         System.out.println(elemCountMap);
+        // for descending  b.compareTo(a) and for ascending a.compareTo(b)
         List<Integer> result = elemCountMap.entrySet().stream()
                 .sorted((a, b) -> b.getValue().compareTo(a.getValue()))
                 .limit(k)
