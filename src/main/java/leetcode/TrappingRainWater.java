@@ -33,7 +33,7 @@ public class TrappingRainWater {
         }
         int waterTrapped = 0;
         for (int i = 0; i < height.length; i++) {
-            waterTrapped += height[i] = Math.min(leftMax[i], rightMax[i]) - height[i];
+            waterTrapped += Math.min(leftMax[i], rightMax[i]) - height[i];
         }
         return waterTrapped;
     }
