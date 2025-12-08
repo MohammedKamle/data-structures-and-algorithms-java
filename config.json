@@ -1,0 +1,14 @@
+{
+  "environment": "production",
+  "apiBaseUrl": "https://api.example.com/v1",
+  "accessToken": "1234567890abcdefDUMMYTOKEN1234567890",
+  "timeout": 5000,
+  "retry": {
+    "maxAttempts": 3,
+    "backoffMs": 2000
+  },
+  "logging": {
+    "level": "info",
+    "enabled": true
+  }
+}
