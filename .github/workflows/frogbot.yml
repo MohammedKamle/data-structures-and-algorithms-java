@@ -12,18 +12,19 @@ permissions:
 jobs:
   scan-pull-request:
     runs-on: ubuntu-latest
-    
-    # 1. DEFINE SECRETS AND VARIABLES HERE (JOB LEVEL)
-    env:
-      JF_URL: ${{ secrets.JF_URL }}
-      JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
-      JF_GIT_TOKEN: ${{ secrets.JF_GIT_TOKEN }}
-      JF_REQUIRE_ENV: "false" 
-
+    environment: frogbot
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Run Frogbot Scan
         uses: jfrog/frogbot@v2
-        # 2. NO "env" BLOCK NEEDED HERE ANYMORE
+        env:
+          # The secrets you configured in Step 1
+          JF_URL: ${{ secrets.JF_URL }}
+          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+          JF_GIT_TOKEN: ${{ secrets.JF_GIT_TOKEN }}
+          
+          # Optional: If you want to specify a specific project or watch in Xray
+          # JF_PROJECT: "my-project-key" 
+          # JF_WATCH: "my-watch-name"
