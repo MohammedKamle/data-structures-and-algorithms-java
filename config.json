@@ -2,6 +2,7 @@
   "environment": "production",
   "apiBaseUrl": "https://api.example.com/v1",
   "accessToken": "1234567890abcdefDUMMYTOKEN1234567890",
+  "accessTokenGit": "12fddffdffddfdf34567890abcdefDUMMYTOKEN1234567890",
   "timeout": 5000,
   "retry": {
     "maxAttempts": 3,
